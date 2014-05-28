@@ -72,11 +72,6 @@
                                          serialNmuber:randomSerialNumber];
     return item;
 }
-- (void)setContainedItem:(BNRItem*)item
-{
-    _containedItem = item;
-    item.container = self;
-}
 
 - (NSString*)description
 {
