@@ -10,4 +10,15 @@
 
 @implementation BNRItemsViewController
 
+- (instancetype)init
+{
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+    }
+    return self;
+}
+- (instancetype)initWithStyle:(UITableViewStyle)style
+{
+    return [self init];
+}
 @end
