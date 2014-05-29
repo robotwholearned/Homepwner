@@ -36,10 +36,6 @@
     }
     return title;
 }
-- (NSString*)tableView:(UITableView*)tableView titleForFooterInSection:(NSInteger)section
-{
-    return @"No more items!";
-}
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger integer;
@@ -72,6 +68,10 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
+
+    UITableViewCell* footerCell = [[UITableViewCell alloc] init];
+    footerCell.textLabel.text = @"No more items!";
+    self.tableView.tableFooterView = footerCell;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
