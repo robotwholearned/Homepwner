@@ -56,4 +56,13 @@
 - (IBAction)toggleEditingMode:(id)sender
 {
 }
+- (UIView*)headerView
+{
+    if (!_headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
+                                      owner:self
+                                    options:nil];
+    }
+    return _headerView;
+}
 @end
