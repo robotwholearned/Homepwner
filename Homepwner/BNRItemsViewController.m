@@ -55,9 +55,32 @@
 }
 - (IBAction)addItem:(id)sender
 {
+    //NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
+
+    BNRItem* item = [[BNRItemStore sharedStore] createItem];
+
+    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:item];
+
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:lastRow
+                                                inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[
+                                              indexPath
+                                           ]
+                          withRowAnimation:UITableViewRowAnimationTop];
 }
 - (IBAction)toggleEditingMode:(id)sender
 {
+    if (self.isEditing) {
+        [sender setTitle:@"Edit"
+                forState:UIControlStateNormal];
+        [self setEditing:NO
+                animated:YES];
+    } else {
+        [sender setTitle:@"Done"
+                forState:UIControlStateNormal];
+        [self setEditing:YES
+                animated:YES];
+    }
 }
 - (UIView*)headerView
 {
