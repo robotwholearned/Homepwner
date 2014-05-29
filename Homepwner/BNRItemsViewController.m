@@ -14,7 +14,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         for (int i = 0; i < 5; i++) {
             [[BNRItemStore sharedStore] createItem];
