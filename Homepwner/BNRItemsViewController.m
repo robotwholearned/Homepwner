@@ -10,6 +10,10 @@
 #import "BNRItem.h"
 #import "BNRItemStore.h"
 
+@interface BNRItemsViewController ()
+@property (nonatomic) IBOutlet UIView* headerView;
+@end
+
 @implementation BNRItemsViewController
 
 - (instancetype)init
@@ -45,5 +49,11 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
+}
+- (IBAction)addItem:(id)sender
+{
+}
+- (IBAction)toggleEditingMode:(id)sender
+{
 }
 @end
