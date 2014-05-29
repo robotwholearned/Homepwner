@@ -49,6 +49,12 @@
 
     UIView* header = self.headerView;
     [self.tableView setTableHeaderView:header];
+
+    UITableViewCell* footerCell = [[UITableViewCell alloc] init];
+    footerCell.textLabel.text = @"No more porridge!";
+    UIView* footerView = [[UIView alloc] initWithFrame:footerCell.frame];
+    [footerView addSubview:footerCell];
+    self.tableView.tableFooterView = footerView;
 }
 - (IBAction)addItem:(id)sender
 {
