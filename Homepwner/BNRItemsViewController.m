@@ -36,6 +36,10 @@
     }
     return title;
 }
+- (NSString*)tableView:(UITableView*)tableView titleForFooterInSection:(NSInteger)section
+{
+    return @"No more items!";
+}
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger integer;
