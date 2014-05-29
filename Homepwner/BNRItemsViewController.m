@@ -16,7 +16,7 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             [[BNRItemStore sharedStore] createItem];
         }
     }
@@ -60,6 +60,7 @@
 
     BNRItem* item = items[indexPath.row];
     cell.textLabel.text = [item description];
+    cell.textLabel.font = [UIFont systemFontOfSize:20];
 
     return cell;
 }
@@ -72,6 +73,8 @@
     UITableViewCell* footerCell = [[UITableViewCell alloc] init];
     footerCell.textLabel.text = @"No more items!";
     self.tableView.tableFooterView = footerCell;
+    self.tableView.rowHeight = 60.0;
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
