@@ -26,15 +26,38 @@
 {
     return [self init];
 }
+- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString* title;
+    if (section == 0) {
+        title = @"< $50";
+    } else if (section == 1) {
+        title = @">= $50";
+    }
+    return title;
+}
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allItems] count];
+    NSInteger integer;
+    if (section == 1) {
+        integer = [[[BNRItemStore sharedStore] allItemsOver50] count];
+    } else if (section == 0) {
+        integer = [[[BNRItemStore sharedStore] allItemsUnder50] count];
+    }
+    return integer;
 }
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                                             forIndexPath:indexPath];
-    NSArray* items = [[BNRItemStore sharedStore] allItems];
+
+    NSArray* items;
+    if (indexPath.section == 0) {
+        items = [[BNRItemStore sharedStore] allItemsUnder50];
+    } else if (indexPath.section == 1) {
+        items = [[BNRItemStore sharedStore] allItemsOver50];
+    }
+
     BNRItem* item = items[indexPath.row];
     cell.textLabel.text = [item description];
 
@@ -46,4 +69,9 @@
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
+{
+    return 2;
+}
+
 @end

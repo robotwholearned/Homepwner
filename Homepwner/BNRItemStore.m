@@ -51,5 +51,25 @@
 {
     return [self.privateItems copy];
 }
+- (NSArray*)allItemsUnder50
+{
+    NSMutableArray* temp = [[NSMutableArray alloc] init];
+    for (BNRItem* item in [self.privateItems copy]) {
+        if ([item valueInDollars] < 50) {
+            [temp addObject:item];
+        }
+    }
+    return (NSArray*)temp;
+}
+- (NSArray*)allItemsOver50
+{
+    NSMutableArray* temp = [[NSMutableArray alloc] init];
 
+    for (BNRItem* item in [self.privateItems copy]) {
+        if ([item valueInDollars] >= 50) {
+            [temp addObject:item];
+        }
+    }
+    return (NSArray*)temp;
+}
 @end
