@@ -51,5 +51,9 @@
 {
     return [self.privateItems copy];
 }
+-(void)removeItem:(BNRItem*)item
+{
+  [self.privateItems removeObjectIdenticalTo:item];
+}
 
 @end
