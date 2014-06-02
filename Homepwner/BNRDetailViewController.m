@@ -8,6 +8,7 @@
 
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField* nameField;
@@ -60,6 +61,8 @@
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info
 {
     UIImage* selectedImage = info[UIImagePickerControllerOriginalImage];
+    [[BNRImageStore sharedStore] setImage:selectedImage
+                                   forKey:self.item.itemKey];
     self.imageView.image = selectedImage;
     [self dismissViewControllerAnimated:YES
                              completion:NULL];
