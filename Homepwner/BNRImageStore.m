@@ -8,6 +8,32 @@
 
 #import "BNRImageStore.h"
 
+@interface BNRImageStore ()
+@property (nonatomic) NSDictionary* dictionary;
+@end
 @implementation BNRImageStore
++ (instancetype)sharedStore
+{
+    static BNRImageStore* sharedStore;
+
+    if (!sharedStore) {
+        sharedStore = [[self alloc] initPrivate];
+    }
+    return sharedStore;
+}
+- (instancetype)init
+{
+    [NSException raise:@"Singleton"
+                format:@"Use +[BNRImageStore sharedStore]"];
+    return nil;
+}
+- (instancetype)initPrivate
+{
+    self = [super init];
+    if (self) {
+        _dictionary = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 @end
