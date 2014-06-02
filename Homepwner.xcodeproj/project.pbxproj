@@ -11,6 +11,8 @@
 		E380EA0F1935945400AA215A /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E380EA0E1935945400AA215A /* BNRItemStore.m */; };
 		E3B10496193C312600C4A44A /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B10494193C312600C4A44A /* BNRDetailViewController.m */; };
 		E3B10497193C312600C4A44A /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B10495193C312600C4A44A /* BNRDetailViewController.xib */; };
+		E3B1049B193C60CE00C4A44A /* BNRDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B10499193C60CE00C4A44A /* BNRDatePickerViewController.m */; };
+		E3B1049C193C60CE00C4A44A /* BNRDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B1049A193C60CE00C4A44A /* BNRDatePickerViewController.xib */; };
 		E3E4B4571935882A00C1E2FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E4B4561935882A00C1E2FF /* Foundation.framework */; };
 		E3E4B4591935882A00C1E2FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E4B4581935882A00C1E2FF /* CoreGraphics.framework */; };
 		E3E4B45B1935882A00C1E2FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E4B45A1935882A00C1E2FF /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 		E3B10493193C312600C4A44A /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
 		E3B10494193C312600C4A44A /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
 		E3B10495193C312600C4A44A /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		E3B10498193C60CE00C4A44A /* BNRDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDatePickerViewController.h; sourceTree = "<group>"; };
+		E3B10499193C60CE00C4A44A /* BNRDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDatePickerViewController.m; sourceTree = "<group>"; };
+		E3B1049A193C60CE00C4A44A /* BNRDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDatePickerViewController.xib; sourceTree = "<group>"; };
 		E3E4B4531935882A00C1E2FF /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E4B4561935882A00C1E2FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3E4B4581935882A00C1E2FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +137,9 @@
 				E3B10493193C312600C4A44A /* BNRDetailViewController.h */,
 				E3B10494193C312600C4A44A /* BNRDetailViewController.m */,
 				E3B10495193C312600C4A44A /* BNRDetailViewController.xib */,
+				E3B10498193C60CE00C4A44A /* BNRDatePickerViewController.h */,
+				E3B10499193C60CE00C4A44A /* BNRDatePickerViewController.m */,
+				E3B1049A193C60CE00C4A44A /* BNRDatePickerViewController.xib */,
 				E3E4B4681935882A00C1E2FF /* Images.xcassets */,
 				E3E4B45D1935882A00C1E2FF /* Supporting Files */,
 			);
@@ -244,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3B10497193C312600C4A44A /* BNRDetailViewController.xib in Resources */,
+				E3B1049C193C60CE00C4A44A /* BNRDatePickerViewController.xib in Resources */,
 				E3E4B4611935882A00C1E2FF /* InfoPlist.strings in Resources */,
 				E3E4B4691935882A00C1E2FF /* Images.xcassets in Resources */,
 			);
@@ -264,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B1049B193C60CE00C4A44A /* BNRDatePickerViewController.m in Sources */,
 				E3B10496193C312600C4A44A /* BNRDetailViewController.m in Sources */,
 				E380EA0F1935945400AA215A /* BNRItemStore.m in Sources */,
 				E3E4B48719358E1700C1E2FF /* BNRItemsViewController.m in Sources */,

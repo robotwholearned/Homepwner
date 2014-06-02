@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNRItem : NSObject {
-}
+@interface BNRItem : NSObject
+
 @property (nonatomic, copy) NSString* itemName;
 @property (nonatomic, copy) NSString* serialNumber;
 @property (nonatomic) int valueInDollars;
-@property (nonatomic, readonly, strong) NSDate* dateCreated;
+@property (nonatomic) NSDate* dateCreated;
 
 //desiganted initializer
 - (instancetype)initWithItemName:(NSString*)name
