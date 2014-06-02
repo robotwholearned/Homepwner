@@ -9,7 +9,7 @@
 #import "BNRImageStore.h"
 
 @interface BNRImageStore ()
-@property (nonatomic) NSDictionary* dictionary;
+@property (nonatomic) NSMutableDictionary* dictionary;
 @end
 @implementation BNRImageStore
 + (instancetype)sharedStore
@@ -34,6 +34,23 @@
         _dictionary = [[NSMutableDictionary alloc] init];
     }
     return self;
+}
+
+- (void)setImage:(UIImage*)image forKey:(NSString*)key
+{
+    [self.dictionary setObject:image
+                        forKey:key];
+}
+- (UIImage*)imageForKey:(NSString*)key
+{
+    return [self.dictionary objectForKey:key];
+}
+- (void)deleteImageForKey:(NSString*)key
+{
+    if (!key) {
+        return;
+    }
+    [self.dictionary removeObjectForKey:key];
 }
 
 @end
