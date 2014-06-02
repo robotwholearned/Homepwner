@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDetailViewController">
             <connections>
+                <outlet property="dateLabel" destination="PvY-Q1-cVh" id="ecs-lw-bel"/>
+                <outlet property="nameField" destination="hTo-Zd-JFH" id="dg8-Qg-NxN"/>
+                <outlet property="serialNumberField" destination="RvF-MQ-Iiq" id="3zT-S2-co5"/>
+                <outlet property="valueField" destination="rh2-hg-Dnb" id="Fgi-fc-PhO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,8 +17,89 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-yE-ytg" userLabel="nameLabel">
+                    <rect key="frame" x="20" y="78" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-ok-Lub" userLabel="serialNumberLabel">
+                    <rect key="frame" x="20" y="117" width="43" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpU-w0-MrE" userLabel="valueLable">
+                    <rect key="frame" x="20" y="154" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvY-Q1-cVh" userLabel="dateLabel">
+                    <rect key="frame" x="20" y="189" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="gbw-7K-OPD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rh2-hg-Dnb" userLabel="valueField">
+                    <rect key="frame" x="70" y="151" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3wu-H0-hMK"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RvF-MQ-Iiq" userLabel="serialNumberField">
+                    <rect key="frame" x="70" y="113" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="VQQ-wT-keo"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTo-Zd-JFH" userLabel="nameField">
+                    <rect key="frame" x="70" y="75" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ewX-tA-MGc"/>
+                    </connections>
+                </textField>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UpU-w0-MrE" firstAttribute="leading" secondItem="j4U-ok-Lub" secondAttribute="leading" id="B0M-2w-uVU"/>
+                <constraint firstItem="rh2-hg-Dnb" firstAttribute="top" secondItem="RvF-MQ-Iiq" secondAttribute="bottom" constant="8" symbolic="YES" id="BI3-g1-1a7"/>
+                <constraint firstItem="rh2-hg-Dnb" firstAttribute="leading" secondItem="UpU-w0-MrE" secondAttribute="trailing" constant="8" symbolic="YES" id="C1F-gP-wmL"/>
+                <constraint firstItem="hTo-Zd-JFH" firstAttribute="baseline" secondItem="IGd-yE-ytg" secondAttribute="baseline" id="JyU-M3-4n7"/>
+                <constraint firstItem="RvF-MQ-Iiq" firstAttribute="leading" secondItem="hTo-Zd-JFH" secondAttribute="leading" id="LcA-mH-B4n"/>
+                <constraint firstItem="j4U-ok-Lub" firstAttribute="leading" secondItem="IGd-yE-ytg" secondAttribute="leading" id="Lol-fI-z1t"/>
+                <constraint firstItem="IGd-yE-ytg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="MaN-17-D1r"/>
+                <constraint firstItem="PvY-Q1-cVh" firstAttribute="top" secondItem="rh2-hg-Dnb" secondAttribute="bottom" constant="8" symbolic="YES" id="NXr-Md-mTY"/>
+                <constraint firstAttribute="trailing" secondItem="hTo-Zd-JFH" secondAttribute="trailing" constant="20" symbolic="YES" id="OkC-og-uQv"/>
+                <constraint firstItem="hTo-Zd-JFH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="RCY-M4-oTv"/>
+                <constraint firstItem="RvF-MQ-Iiq" firstAttribute="top" secondItem="hTo-Zd-JFH" secondAttribute="bottom" constant="8" symbolic="YES" id="ZkX-VA-TmD"/>
+                <constraint firstItem="UpU-w0-MrE" firstAttribute="baseline" secondItem="rh2-hg-Dnb" secondAttribute="baseline" id="aAc-ty-ajA"/>
+                <constraint firstItem="RvF-MQ-Iiq" firstAttribute="trailing" secondItem="rh2-hg-Dnb" secondAttribute="trailing" id="acD-g2-SLn"/>
+                <constraint firstItem="hTo-Zd-JFH" firstAttribute="trailing" secondItem="RvF-MQ-Iiq" secondAttribute="trailing" id="ihg-t7-Ezf"/>
+                <constraint firstItem="RvF-MQ-Iiq" firstAttribute="leading" secondItem="rh2-hg-Dnb" secondAttribute="leading" id="jo8-kW-njb"/>
+                <constraint firstItem="UpU-w0-MrE" firstAttribute="leading" secondItem="PvY-Q1-cVh" secondAttribute="leading" id="mdU-Rj-q58"/>
+                <constraint firstItem="UpU-w0-MrE" firstAttribute="top" secondItem="j4U-ok-Lub" secondAttribute="bottom" constant="16" id="ntQ-7q-MsI"/>
+                <constraint firstItem="PvY-Q1-cVh" firstAttribute="trailing" secondItem="rh2-hg-Dnb" secondAttribute="trailing" id="z72-33-O72"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
