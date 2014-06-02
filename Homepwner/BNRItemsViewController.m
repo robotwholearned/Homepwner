@@ -27,6 +27,7 @@
                                                                                        target:self
                                                                                        action:@selector(addItem:)];
         navItem.rightBarButtonItem = barButtonItem;
+        navItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
