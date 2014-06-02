@@ -51,4 +51,8 @@
     _item = item;
     self.navigationItem.title = item.itemName;
 }
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    [self.view endEditing:YES];
+}
 @end
