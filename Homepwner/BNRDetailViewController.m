@@ -57,6 +57,13 @@
 {
     [self.view endEditing:YES];
 }
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info
+{
+    UIImage* selectedImage = info[UIImagePickerControllerOriginalImage];
+    self.imageView.image = selectedImage;
+    [self dismissViewControllerAnimated:YES
+                             completion:NULL];
+}
 - (IBAction)takePicture:(id)sender
 {
     UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
