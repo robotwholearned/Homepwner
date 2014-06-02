@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel* dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar* toolbar;
+- (IBAction)backgroundTapped:(id)sender;
+
 @end
 
 @implementation BNRDetailViewController
@@ -91,4 +93,8 @@
     return YES;
 }
 
+- (IBAction)backgroundTapped:(id)sender
+{
+    [self.view endEditing:YES];
+}
 @end
