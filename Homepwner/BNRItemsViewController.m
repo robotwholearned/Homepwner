@@ -23,6 +23,10 @@
     if (self) {
         UINavigationItem* navItem = self.navigationItem;
         navItem.title = @"Homepwner";
+        UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                       target:self
+                                                                                       action:@selector(addItem:)];
+        navItem.rightBarButtonItem = barButtonItem;
     }
     return self;
 }
