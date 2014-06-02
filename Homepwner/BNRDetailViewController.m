@@ -67,6 +67,9 @@
         imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController
+                       animated:YES
+                     completion:NULL];
 }
 
 @end
