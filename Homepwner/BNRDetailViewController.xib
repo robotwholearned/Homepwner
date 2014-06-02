@@ -19,9 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-yE-ytg" userLabel="nameLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-yE-ytg" userLabel="nameLabel">
                     <rect key="frame" x="20" y="78" width="46" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Db1-y6-RhW"/>
+                        <constraint firstAttribute="height" constant="21" id="za2-Um-LpB"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -92,6 +96,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="seb-eN-P6H" secondAttribute="trailing" id="QRq-Sn-WXI"/>
+                <constraint firstItem="IGd-yE-ytg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="SiP-bk-phz"/>
+                <constraint firstItem="IGd-yE-ytg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="WcC-Jf-I63"/>
                 <constraint firstItem="seb-eN-P6H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="otT-qx-End"/>
                 <constraint firstAttribute="bottom" secondItem="seb-eN-P6H" secondAttribute="bottom" id="tzj-qq-DCK"/>
             </constraints>
