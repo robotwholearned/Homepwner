@@ -14,13 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextField* serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField* valueField;
 @property (weak, nonatomic) IBOutlet UILabel* dateLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIImageView* imageView;
+@property (weak, nonatomic) IBOutlet UIToolbar* toolbar;
 @end
 
 @implementation BNRDetailViewController
-- (IBAction)takePicture:(id)sender {
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -59,4 +57,15 @@
 {
     [self.view endEditing:YES];
 }
+- (IBAction)takePicture:(id)sender
+{
+    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+}
+
 @end
