@@ -46,4 +46,9 @@
     item.serialNumber = self.serialNumberField.text;
     item.valueInDollars = [self.valueField.text intValue];
 }
+- (void)setItem:(BNRItem*)item
+{
+    _item = item;
+    self.navigationItem.title = item.itemName;
+}
 @end
