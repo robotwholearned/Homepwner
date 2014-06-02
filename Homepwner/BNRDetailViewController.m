@@ -18,6 +18,8 @@
 @end
 
 @implementation BNRDetailViewController
+- (IBAction)takePicture:(id)sender {
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {

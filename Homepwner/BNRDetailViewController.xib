@@ -85,7 +85,11 @@
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem systemItem="camera" id="aVO-m0-uOE"/>
+                        <barButtonItem systemItem="camera" id="aVO-m0-uOE">
+                            <connections>
+                                <action selector="takePicture:" destination="-1" id="q7d-UB-n5I"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>
