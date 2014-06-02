@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDetailViewController">
             <connections>
                 <outlet property="dateLabel" destination="PvY-Q1-cVh" id="ecs-lw-bel"/>
+                <outlet property="imageView" destination="Plp-fe-cDJ" id="lVN-5F-9RR"/>
                 <outlet property="nameField" destination="hTo-Zd-JFH" id="dg8-Qg-NxN"/>
                 <outlet property="serialNumberField" destination="RvF-MQ-Iiq" id="3zT-S2-co5"/>
                 <outlet property="valueField" destination="rh2-hg-Dnb" id="Fgi-fc-PhO"/>
@@ -104,7 +105,6 @@
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
