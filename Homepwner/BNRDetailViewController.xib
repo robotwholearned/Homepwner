@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRDetailViewController">
             <connections>
                 <outlet property="dateLabel" destination="PvY-Q1-cVh" id="ecs-lw-bel"/>
-                <outlet property="imageView" destination="Plp-fe-cDJ" id="lVN-5F-9RR"/>
                 <outlet property="nameField" destination="hTo-Zd-JFH" id="dg8-Qg-NxN"/>
                 <outlet property="serialNumberField" destination="RvF-MQ-Iiq" id="3zT-S2-co5"/>
                 <outlet property="toolbar" destination="seb-eN-P6H" id="tJZ-KC-4we"/>
@@ -75,11 +74,6 @@
                         <outlet property="delegate" destination="-1" id="ewX-tA-MGc"/>
                     </connections>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Plp-fe-cDJ">
-                    <rect key="frame" x="20" y="227" width="280" height="280"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.59999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                </imageView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seb-eN-P6H">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
