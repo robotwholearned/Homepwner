@@ -37,6 +37,10 @@
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
     }
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+
+    NSString* key = item.itemKey;
+    UIImage* imageToDisplay = [[BNRImageStore sharedStore] imageForKey:key];
+    self.imageView.image = imageToDisplay;
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
