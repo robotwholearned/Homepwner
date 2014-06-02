@@ -69,7 +69,7 @@
                         <outlet property="delegate" destination="-1" id="VQQ-wT-keo"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTo-Zd-JFH" userLabel="nameField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTo-Zd-JFH" userLabel="nameField">
                     <rect key="frame" x="70" y="75" width="230" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,9 +95,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="hTo-Zd-JFH" firstAttribute="baseline" secondItem="IGd-yE-ytg" secondAttribute="baseline" id="JEF-Qw-O3S"/>
+                <constraint firstAttribute="trailing" secondItem="hTo-Zd-JFH" secondAttribute="trailing" constant="20" id="OoN-Wk-q2a"/>
                 <constraint firstAttribute="trailing" secondItem="seb-eN-P6H" secondAttribute="trailing" id="QRq-Sn-WXI"/>
                 <constraint firstItem="IGd-yE-ytg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="SiP-bk-phz"/>
                 <constraint firstItem="IGd-yE-ytg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="WcC-Jf-I63"/>
+                <constraint firstItem="hTo-Zd-JFH" firstAttribute="leading" secondItem="IGd-yE-ytg" secondAttribute="trailing" constant="4" id="e70-4t-lTR"/>
                 <constraint firstItem="seb-eN-P6H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="otT-qx-End"/>
                 <constraint firstAttribute="bottom" secondItem="seb-eN-P6H" secondAttribute="bottom" id="tzj-qq-DCK"/>
             </constraints>
