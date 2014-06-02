@@ -12,7 +12,6 @@
 #import "BNRDetailViewController.h"
 
 @interface BNRItemsViewController ()
-@property (nonatomic) IBOutlet UIView* headerView;
 @end
 
 @implementation BNRItemsViewController
@@ -55,9 +54,6 @@
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
 
-    UIView* header = self.headerView;
-    [self.tableView setTableHeaderView:header];
-
     UITableViewCell* footerCell = [[UITableViewCell alloc] init];
     footerCell.textLabel.text = @"No more porridge!";
     UIView* footerView = [[UIView alloc] initWithFrame:footerCell.frame];
@@ -78,29 +74,6 @@
                                               indexPath
                                            ]
                           withRowAnimation:UITableViewRowAnimationTop];
-}
-- (IBAction)toggleEditingMode:(id)sender
-{
-    if (self.isEditing) {
-        [sender setTitle:@"Edit"
-                forState:UIControlStateNormal];
-        [self setEditing:NO
-                animated:YES];
-    } else {
-        [sender setTitle:@"Done"
-                forState:UIControlStateNormal];
-        [self setEditing:YES
-                animated:YES];
-    }
-}
-- (UIView*)headerView
-{
-    if (!_headerView) {
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
-                                      owner:self
-                                    options:nil];
-    }
-    return _headerView;
 }
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
 {
