@@ -66,6 +66,7 @@
     } else {
         imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
+    imagePickerController.delegate = self;
 }
 
 @end
