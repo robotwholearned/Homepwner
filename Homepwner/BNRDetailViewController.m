@@ -23,6 +23,16 @@
 
 @implementation BNRDetailViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIImageView* imageViewForConstraints = [[UIImageView alloc] initWithImage:nil];
+    imageViewForConstraints.contentMode = UIViewContentModeScaleAspectFit;
+    imageViewForConstraints.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:imageViewForConstraints];
+    self.imageView = imageViewForConstraints;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
